@@ -17,5 +17,4 @@ use Nnx\Module\Options\ModuleOptionsInterface as CurrentModuleOptionsInterface;
  */
 class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface, CurrentModuleOptionsInterface
 {
-
 }

@@ -12,5 +12,4 @@ namespace Nnx\Module\Options;
  */
 interface ModuleOptionsInterface
 {
-
 }
