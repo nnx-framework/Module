@@ -48,6 +48,5 @@ class IntegrationModuleFunctionalTest extends AbstractHttpControllerTestCase
         foreach ($configModuleKeys as $configModuleKey) {
             static::assertEquals('custom_service_test_token', $appConfig[$configModuleKey]['test_token']);
         }
-
     }
 }
