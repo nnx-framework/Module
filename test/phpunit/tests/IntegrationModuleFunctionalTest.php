@@ -7,7 +7,8 @@ namespace Nnx\Module\PhpUnit\Test;
 
 use Nnx\Module\PhpUnit\TestData\TestPaths;
 use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
-
+use Nnx\Module\PhpUnit\TestData\IntegrationModule\Service;
+use Nnx\Module\PhpUnit\TestData\IntegrationModule\Custom\Service as CustomService;
 
 /**
  * Class IntegrationModuleFunctionalTest
@@ -32,6 +33,21 @@ class IntegrationModuleFunctionalTest extends AbstractHttpControllerTestCase
 
         $appConfig = $sl->get('Config');
 
-        return ;
+        $configModuleKeys = [
+            Service\Module1\Module::CONFIG_KEY,
+            Service\Module2\Module::CONFIG_KEY,
+            Service\Module3\Module::CONFIG_KEY,
+            Service\Service\Module::CONFIG_KEY,
+
+            CustomService\Module1\Module::CONFIG_KEY,
+            CustomService\Module2\Module::CONFIG_KEY,
+            CustomService\Module3\Module::CONFIG_KEY,
+            CustomService\Service\Module::CONFIG_KEY,
+        ];
+
+        foreach ($configModuleKeys as $configModuleKey) {
+            static::assertEquals('custom_service_test_token', $appConfig[$configModuleKey]['test_token']);
+        }
+
     }
 }
