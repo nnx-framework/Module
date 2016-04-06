@@ -5,6 +5,6 @@
 ## Оглавление
 
 - Интеграционные модули
-    - [Концепция интеграционных модулей][integration-module.md]
-    - [Конфигурирование модулей сервиса][configure-service-module.md]
+    - [Концепция интеграционных модулей](integration-module.md)
+    - [Конфигурирование модулей сервиса](configure-service-module.md)
 
