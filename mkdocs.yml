@@ -2,6 +2,7 @@ docs_dir: doc/book/ru
 pages:
     - index.md
     - 'Интеграционные модули':
+      - 'Концепция интеграционных модулей': 'integration-module.md'
       - 'Конфигурирование модулей сервиса': 'configure-service-module.md'
 site_name: module
 site_description: 'Набор решений и у утилит, для упрощения работы с модулями zf2'
