@@ -44,7 +44,8 @@ return [
 - \Nnx\Module\IntegrationModuleInterface
     - метод getServiceModules - возвращает массив имен модулей сервиса.
 - \Nnx\Module\CommonModuleOptionsInterface
-    - метод getCommonModuleOptions - возвращает массив опций, общих для всех модулей сервиса.
+    - метод getCommonModuleOptions - возвращает массив ключей из конфига интеграционного модуля.
+    Всем модулям сервиса, в конфиги, будут добавлены данные, с этими ключами. Значения ключей, получаются из аналогичных настроек, интеграционного модуля
 
 Для **интеграционного модуля добавить трейт: \Nnx\Module\IntegrationModuleTrait**
 

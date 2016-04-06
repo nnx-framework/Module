@@ -49,8 +49,8 @@ project
 
 - Приложение знает о модуле customer-vendor-contract\contract
 - Интеграционный модуль customer-vendor-contract\contract знает о 
-    -- Модуле customer-vendor-contract\contract-feature
-    -- О интеграционном модуле nnx-contract\contract
+    - Модуле customer-vendor-contract\contract-feature
+    - О интеграционном модуле nnx-contract\contract
 - Интеграционный модуль nnx-contract\contract, знает о модулях:
     - nnx-contract\contract
     - nnx-contract\contract-core
