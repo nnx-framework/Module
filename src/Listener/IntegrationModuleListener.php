@@ -112,16 +112,14 @@ class IntegrationModuleListener extends AbstractListenerAggregate implements Int
     public function getCommonModuleOptionsByIntegrationModule($integrationModule, ConfigMergerInterface $configListener)
     {
         $commonModuleOptions = [];
-        if (!$integrationModule instanceof CommonModuleOptionsInterface) {
+        if (
+            (!$integrationModule instanceof CommonModuleOptionsInterface)
+            || (!$integrationModule instanceof ModuleConfigKeyProviderInterface)
+        ) {
             return $commonModuleOptions;
         }
 
         $listCommonModuleOptions = $integrationModule->getCommonModuleOptions();
-
-        if (!$integrationModule instanceof ModuleConfigKeyProviderInterface) {
-            return $commonModuleOptions;
-        }
-
         $integrationModuleConfigKey = $integrationModule->getModuleConfigKey();
 
         $appConfig = $configListener->getMergedConfig(false);

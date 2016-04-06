@@ -144,7 +144,7 @@ trait IntegrationModuleTrait
         $eventClassName = $this->getPrototypeIntegrationModuleEventClassName();
 
         $r = new ReflectionClass($eventClassName);
-        $event = $r->newInstance($r);
+        $event = $r->newInstance();
 
         if (!$event instanceof IntegrationModuleEventInterface) {
             $errMsg = sprintf('Integration module event not implement %s', IntegrationModuleEventInterface::class);
