@@ -18,3 +18,11 @@ Develop:
 ## Описание модуля
 
 Набор решений и утилит, для упрощения работы с модулями zf2
+
+
+# API
+- [Module Api](API.md)
+
+# Документация
+- [Online documentation](http://module.readthedocs.org/ru/latest/)
+- [Documentation source files](doc/book/ru/)
